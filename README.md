@@ -81,6 +81,7 @@ github-analyzer/
 ├── .env.example
 ├── .gitignore
 ├── app.js
+├── github-analyser.postman_collection.json
 ├── schema.sql
 └── README.md
 ```
