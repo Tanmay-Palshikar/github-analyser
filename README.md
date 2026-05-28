@@ -64,17 +64,24 @@ GitHub Analyser accepts a GitHub username, calls the GitHub REST API, computes a
 ## Project Structure
 
 ```
-github-analyser/
+github-analyzer/
 ├── src/
-│   ├── app.js               # Express app setup & middleware
-│   ├── routes/              # Route definitions
-│   ├── controllers/         # Request handlers & business logic
-│   ├── services/            # GitHub API calls & data processing
-│   └── db/                  # MySQL connection & query helpers
-├── schema.sql               # Database schema (run once to initialise)
-├── .env.example             # Environment variable template
+│   ├── config/
+│   │   └── db.js                  # MySQL connection
+│   ├── controllers/
+│   │   └── profileController.js
+│   ├── routes/
+│   │   └── profileRoutes.js
+│   ├── services/
+│   │   └── githubService.js       # All GitHub API logic
+│   ├── models/
+│   │   └── profileModel.js        # DB queries
+│   └── middlewares/
+│       └── errorHandler.js
+├── .env.example
 ├── .gitignore
-├── package.json
+├── app.js
+├── schema.sql
 └── README.md
 ```
 
